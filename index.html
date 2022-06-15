@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e29d09bd26.js" crossorigin="anonymous"></script>
+    <title>Booki</title>
 </head>
+
 <body>
-    
+
+    <main>
+        <header>
+            <img src="images/logo/Booki@3x.png" alt="Booki logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Hébergements</a></li>
+                    <li><a href="#">Activités</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="searchContainer">
+            <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
+            <p>En plein centre ville ou en pleine nature</p>
+
+            <form action="#" method="post">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="search" name="search" id="search" placeholder="Marseille, France">
+                <button><p class="rechercher">Rechercher</p><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div id="filtersContainer">
+                <h2>Filtres</h2>
+                <div id="filtersContent">
+                    <div class="filter">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-money-bill-wave"></i>                        
+                        </div>
+                        <h2>Économique</h2>
+                    </div>
+                    <div class="filter">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-child-reaching"></i>
+                        </div>
+                        <h2>Familial</h2>
+                    </div>
+                    <div class="filter">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h2>Romantique</h2>
+                    </div>
+                    <div class="filter">
+                        <div class="iconContainer">
+                            <i class="fa-solid fa-dog"></i>
+                        </div>
+                        <h2>Animaux autorisés</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div id="searchInfo">
+                <div class="infoContainer">
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </div>
+    </main>
+
 </body>
+
 </html>
