@@ -87,7 +87,7 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .fa-magnifying-glass {
-    display: none;
+    display: none !important;
 }
 
 form {
@@ -208,6 +208,138 @@ h2:first-child {
 }
 
 
+/* ACCOMMODATION */
+#accommodationContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#accommodationContainer h2{
+    font-size: 15px;
+}
+#accommodationContainer p{
+    font-size: 13px;
+}
+
+#suggestionContainer{
+    width: 70%;
+    padding: 30px 40px;
+    background-color: var(--clr-background-grey);
+    border-radius: 15px;
+}
+
+#suggestionContainer h1{
+    margin: 0;
+}
+
+#suggestionTileContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0 30px 0;
+}
+
+.suggestionTile{
+    width: 240px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 1px #dfdede;
+}
+
+
+.suggestionTile img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 17px 17px 0 0;
+}
+
+.tileInfo{
+    padding: 0 10px;
+    line-height: 25px;
+}
+
+.tileInfo h2{
+    margin: 0;
+}
+
+.tileInfo .stars{
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+.tileInfo .fa-star{
+    color: var(--clr-primary-blue);
+}
+
+.greyStar{
+    color: #dfdede !important;
+}
+
+
+#popularContainer{
+    width: 30%;
+    height: auto;
+    padding: 30px 30px;
+    background-color: var(--clr-background-grey);
+    border-radius: 15px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#popularContainer > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+    
+}
+
+#popularContainer h1{
+    margin: 0;
+}
+
+#popularContainer h2{
+    line-height: 20px;
+}
+
+.popularTile{
+    display: flex;
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 1px #dfdede;
+}
+
+.popularTile img{
+    width: 115px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 17px 0 0 17px;
+}
+
+.popularTile .tileInfo{
+    padding: 10px 20px 0 20px ;
+}
+
+.popularTile .tileInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+
+
 
 
 
@@ -297,7 +429,7 @@ h2:first-child {
     }
 
     .fa-magnifying-glass {
-        display: inline;
+        display: block !important;
         color: white;
     }
 
