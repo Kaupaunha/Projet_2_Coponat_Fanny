@@ -66,7 +66,7 @@ nav ul {
 }
 
 nav ul li a {
-    padding: 46px 40px;
+    padding: 45px 40px;
 }
 
 nav ul li a:hover, nav ul li a:focus {
@@ -245,7 +245,7 @@ button .rechercher {
     padding: 5px;
     margin: 10px 0 10px 0;
     border-radius: 20px;
-    box-shadow: 0 2px 10px 1px #dfdede;
+    box-shadow: 0 2px 10px 1px #cccccc;
 }
 
 
@@ -316,12 +316,13 @@ button .rechercher {
     padding: 5px;
     margin: 10px 0 30px 0;
     border-radius: 20px;
-    box-shadow: 0 2px 10px 1px #dfdede;
+    box-shadow: 0 2px 10px 1px #cccccc;
 }
 
 
 .popularTile img {
     width: 115px;
+    min-width: 115px;
     height: auto;
     object-fit: cover;
     border-radius: 17px 0 0 17px;
@@ -350,7 +351,7 @@ button .rechercher {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 400px;
+    height: 100%;
     margin-top: 20px;
 }
 
@@ -367,7 +368,7 @@ button .rechercher {
     height: 100%;
 }
 
-.activityTile{
+.activityTile {
     padding-bottom: 10px;
     border-radius: 20px;
     box-shadow: 0 2px 10px 1px #dfdede;
@@ -380,16 +381,44 @@ button .rechercher {
     border-radius: 20px 20px 0 0;
 }
 
-.activityTile h2{
+.activityTile h2 {
     margin: 10px 15px;
 }
 
-.medium img{
+.medium img {
     height: 150px;
 }
 
-.small img{
+.small img {
     height: 110px;
+}
+
+.hiddenImg {
+    display: none;
+}
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px -50px 0 -50px;
+    padding: 40px 50px;
+    background-color: var(--clr-background-grey);
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+}
+
+footer div h2{
+    margin-bottom: 10px;
+}
+
+footer div a{
+    margin-top: 10px;
 }
 
 
@@ -399,8 +428,8 @@ button .rechercher {
 
 
 /* MEDIA QUERIES */
-@media (min-width:1450px){
-    main{
+@media (min-width:1450px) {
+    main {
         max-width: 1440px;
         margin: 30px auto;
     }
@@ -414,6 +443,8 @@ button .rechercher {
     #suggestionContainer {
         width: 100%;
         background-color: white;
+        padding: 0;
+        margin: 50px 0 25px 0;
     }
 
     #suggestionTileContainer {
@@ -446,6 +477,7 @@ button .rechercher {
 
     .popularTile {
         height: 150px;
+        margin-bottom: 10px;
     }
 
     .popularTile .tileInfo {
@@ -475,7 +507,7 @@ button .rechercher {
     /* ACCOMMODATION */
     #popularContainer {
         margin: 0;
-        padding: 30px 20px;
+        padding: 30px 20px 10px 20px;
     }
 
     #popularContainer>div:nth-child(2) {
@@ -486,14 +518,14 @@ button .rechercher {
         margin: 0;
     }
 
-    #suggestionContainer{
+    #suggestionContainer {
         padding: 0;
         margin-top: 30px;
     }
 
 
     /* ACTIVITIES */
-    #activityTileContainer{
+    #activityTileContainer {
         flex-wrap: wrap;
     }
 
@@ -501,16 +533,35 @@ button .rechercher {
         width: 100%;
     }
 
-    .activityTileGroup{
+    .activityTileGroup {
         justify-content: space-around;
     }
 
-    .activityTile{
-        height: 200px;
+    .activityTile {
+        height: 190px;
+        margin: 20px 0;
     }
 
-    .activityTile img{
-        height: 100px;
+    .activityTile img {
+        display: none;
+        height: 140px;
+    }
+
+    .hiddenImg {
+        display: block !important;
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+
+    /* FOOTER */
+    footer{
+        justify-content: space-between;
+    }
+    footer div{
+        margin: 0;
     }
 
 
@@ -575,19 +626,10 @@ button .rechercher {
         margin: 35px 20px;
     }
 
-    #search {
-        border: none;
-    }
-
-    form {
-        border: solid 1px var(--clr-background-grey);
-        border-radius: 15px;
-        max-width: 328px;
-    }
-
     button {
         border-radius: 15px;
         padding: 17px;
+        margin-left: -20px;
     }
 
     .fa-magnifying-glass {
@@ -635,6 +677,7 @@ button .rechercher {
     /* ACCOMMODATION */
     #popularContainer {
         border-radius: 0;
+        padding-bottom: 10px;
     }
 
     .popularTile {
@@ -643,13 +686,12 @@ button .rechercher {
 
 
     #suggestionContainer {
-        background-color: white;
-        padding: 0;
         margin: 30px 20px 20px 20px;
     }
 
     #suggestionTileContainer {
         flex-direction: column;
+        margin-bottom: 20px;
     }
 
 
@@ -664,5 +706,44 @@ button .rechercher {
 
 
     /* ACTIVITIES */
+    #activityContainer {
+        margin-top: 20px;
+    }
 
+    #activityContainer h1 {
+        margin-left: 20px;
+    }
+
+    .activityTile {
+        margin: 0 20px 30px 20px;
+        height: 190px;
+    }
+
+    .activityTile img {
+        height: 140px;
+    }
+
+
+
+    /* FOOTER */
+
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 20px;
+    }
+
+    footer div{
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media (max-width: 345px){
+    #search{
+        width: 100%;
+    }
 }
